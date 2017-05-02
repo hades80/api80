@@ -1,0 +1,15 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Ma page d'accueil basé sur base.html{% endblock %}
+
+{% block content %}
+
+
+    <h1>Bienvenue sur mon blog</h1>
+
+    <p>La date actuelle est : maintenant </p>
+<img src="{% static 'blog/2.jpeg' %}" alt="Mon image" />
+
+
+{% endblock %}

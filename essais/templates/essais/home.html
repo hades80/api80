@@ -1,0 +1,30 @@
+
+{% extends "base.html" %}
+{% load static %}
+<!DOCTYPE html>
+
+
+
+{% block title %}essais_home avec base.html{% endblock %}
+
+{% block content %}
+
+
+    <h1>Bienvenue sur mon blog</h1>
+
+    <p>La date actuelle est : {{ date }}</p>
+
+    Bonjour {{ pseudo|truncatewords:5 }}
+    Il y a {{ nb_chevaux }} chev{{ nb_chevaux|pluralize:"al,aux" }} dans l'écurie.
+
+    <h3>Commentaires de l'article</h3>
+    {% for commentaire in commentaires %}
+        <p>{{ commentaire }}</p>
+    {% empty %}
+        <p class="empty">Pas de commentaires pour le moment.</p>
+    {% endfor %}
+
+<img src="{% static 'essais/3.jpeg' %}" alt="Mon image6" />
+<img src="{% static 'blog/2.jpeg' %}" alt="Mon image" />
+
+{% endblock %}
