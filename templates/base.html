@@ -89,7 +89,7 @@ un territoire qui englobe les domaines de plusieurs femelles et ne participe pas
     </blockquote>
 
   </div>
-
+Je boirais bien un <span class="glyphicon glyphicon-glass"></span> avant  d'aller écouter de la <span class="glyphicon glyphicon-music"></span> avec ma <span class="glyphicon glyphicon-heart"></span>
 </section>
 
    <section id="content">
@@ -97,10 +97,6 @@ un territoire qui englobe les domaines de plusieurs femelles et ne participe pas
        {% block content %}{% endblock %}
 
    </section>
-
-<footer>
-
-
 
      <div class="row">
 
@@ -116,11 +112,44 @@ un territoire qui englobe les domaines de plusieurs femelles et ne participe pas
        </div>
 
      </div>
-</footer>
+     <div class="col-lg-offset-2 col-lg-8">
+
+        <div class="carousel slide" data-ride="carousel">
+
+          <div class="carousel-inner">
+
+            <div class="item active"> <img alt="" src="{% static 'img/3.jpeg' %}"></div>
+
+            <div class="item"> <img alt="" src="{% static 'img/3.jpeg' %}"></div>
+
+            <div class="item"> <img alt="" src="{% static 'img/3.jpeg' %}"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
 
 
-    <script src="{% static 'js/jquery.js' %}"></script>
-    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.js' %}"> </script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"> </script>
+    <script>
+  $(function (){
+    $('.carousel').carousel();
+    $('blockquote a').tooltip();
+    $('.btn-group .btn:nth-child(1)').click(function () {
+      $('iframe').attr('src', 'http://www.youtube.com/embed/VmnIeLmjuHA');
+    })
+    $('.btn-group .btn:nth-child(2)').click(function () {
+      $('iframe').attr('src', 'http://www.youtube.com/embed/fRAG4T-iqqY');
+    })
+    $('.btn-group .btn:nth-child(3)').click(function () {
+      $('iframe').attr('src', 'http://www.youtube.com/embed/yua4jzecCIE');
+    })
+  });
+</script>
 </body>
 
 </html>
