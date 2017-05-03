@@ -7,33 +7,90 @@
 
 
 <head>
-  <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+  <title>{% block title %}Api80{% endblock %}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/main.css' %}">
-   <title>{% block title %}Api80{% endblock %}</title>
+  <style type="text/css">
 
+  body { padding-top: 70px; }
+
+</style>
 </head>
 
 <body>
+<div class="container">
 
-<header>API80</header>
+<header class="page-header">
+  <h1>API80 - Le site des appiculteurs heureux</h1>
+</header>
 
-    <nav>
-   <h1>blabla</h1>
-       {% block nav %}
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-header">
+  <a class="navbar-brand" href="#">API80</a>
+  </div>
 
-       <ul>
+  <ul class="nav navbar-nav">
+    <li > <a href="/">Accueil</a> </li>
+    <li class="active"><a href="/blog/">Blog</a> </li>
+    <li> <a href="/essais/">Contact-pff</a> </li>
+    <li class="dropdown">
 
-            <li><a href="/">Accueil</a></li>
+               <a data-toggle="dropdown" href="#">Témoignages<b class="caret"></b></a>
 
-            <li><a href="/blog/">Blog</a></li>
+               <ul class="dropdown-menu">
+                 <li><a href="/essais/">Dompteurs</a></li>
+                 <li><a href="/essais/">Zoos</a></li>
+                 <li><a href="/essais/">Chasseurs</a></li>
+                 <li class="divider"></li>
+                 <li><a href="/essais/">Autres témoignages</a></li>
+               </ul>
 
-            <li><a href="/essais/">Contact-pff</a></li>
+      </li>
 
-       </ul>
+    <li class="disabled"> <a href="#">Références</a> </li>
+  </ul>
 
-       {% endblock %}
+  <p>La date actuelle est : {{ date }}</p>
+</div>
 
-   </nav>
+
+   <section class="row">
+
+  <div class="col-lg-12">
+
+    <p>
+
+      Je suis passionné par les <strong>tigres</strong> depuis très longtemps. Ce site a été construit en <em>hommage à ces merveilleux félins...</em><br>
+
+      Je fais partie de la <abbr title="Société des Amoureux des Tigres">SAT</abbr> qui a pour but de faire connaître ces splendides animaux.
+
+    </p>
+
+    <p>Voici ce qu'en dit le wikipedia :</p>
+
+    <blockquote>
+
+      Le Tigre (Panthera tigris) est un mammifère carnivore de la famille des félidés (Felidae) du genre Panthera.
+
+Aisément reconnaissable à sa fourrure rousse rayée de noir, il est le plus grand félin sauvage et l'un des plus grands carnivores du monde.
+
+L'espèce est divisée en neuf sous-espèces possédant des différences mineures en termes de taille ou de comportement. Superprédateur,
+
+il chasse principalement les cerfs et les sangliers, bien qu'il puisse s'attaquer à des proies de taille plus importante comme les buffles.
+
+Jusqu'au XIXe siècle, le Tigre était réputé mangeur d'homme. La structure sociale des tigres en fait un animal solitaire ; le mâle possède
+
+un territoire qui englobe les domaines de plusieurs femelles et ne participe pas à l'éducation des petits.<br>
+
+      <small class="pull-right">Wikipedia</small><br>
+
+    </blockquote>
+
+  </div>
+
+</section>
 
    <section id="content">
 
@@ -41,13 +98,28 @@
 
    </section>
 
-<footer>&copy; Hadesian</footer>
+<footer>
 
 
 
+     <div class="row">
+
+       <div class="col-lg-4">
+         4 colonnes
+<img src="{% static 'img/3.jpeg' %}" alt="Mon image6" class="img-circle" />
+<img src="{% static 'blog/2.jpeg' %}" alt="Mon image"  class="img-circle"/>
+</div>
+       <div class="col-lg-8">
+
+         8 colonnes
+<img src="{% static 'blog/2.jpeg' %}" alt="Mon image"class="img-thumbnail" class="img-rounded />
+       </div>
+
+     </div>
+</footer>
 
 
-
+    <script src="{% static 'js/jquery.js' %}"></script>
     <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 </body>
 

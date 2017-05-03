@@ -2,7 +2,9 @@
 {% extends "base.html" %}
 {% load static %}
 <!DOCTYPE html>
+<!-- Ce commentaire HTML sera visible dans le code source. -->
 
+{# Ce commentaire Django ne sera pas visible dans le code source. #}
 
 
 {% block title %}essais_home avec base.html{% endblock %}
@@ -12,19 +14,19 @@
 
     <h1>Bienvenue sur mon blog</h1>
 
-    <p>La date actuele est : {{ date }}</p>
+    <p>La date actuelle est : {{ date }}</p>
 
-    Bonjour {{ pseudo|truncatewords:5 }}
+    Bonjour {{ pseudo|default:"visiteur"|truncatewords:2 }}
     Il y a {{ nb_chevaux }} chev{{ nb_chevaux|pluralize:"al,aux" }} dans l'écurie.
 
-    <h3 color:'yellow'>Commentares de l'article</h3>
+    <h3 color:black>Commentaires de l'article</h3>
     {% for commentaire in commentaires %}
         <p>{{ commentaire }}</p>
     {% empty %}
         <p class="empty">Pas de commentaires pour le moment.</p>
     {% endfor %}
 
-<img src="{% static 'essais/3.jpeg' %}" alt="Mon image6" />
-<img src="{% static 'blog/2.jpeg' %}" alt="Mon image" />
+
+
 
 {% endblock %}
