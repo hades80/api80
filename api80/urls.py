@@ -23,5 +23,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^blog/', include('blog.urls')),
     url(r'^essais/', include('essais.urls')),
-    url(r'^', include('essais.urls')),
-] + static (settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    url(r'^', include('main.urls')),
+]
